@@ -1,0 +1,18 @@
+{
+  "name": "@outreachr/design-system",
+  "version": "1.0.0",
+  "description": "Shared design tokens and styles for Outreachr projects",
+  "main": "styles.css",
+  "files": [
+    "styles.css",
+    "tailwind.config.js",
+    "README.md"
+  ],
+  "keywords": [
+    "outreachr",
+    "design-system",
+    "tailwind"
+  ],
+  "author": "devesesam",
+  "license": "UNLICENSED"
+}

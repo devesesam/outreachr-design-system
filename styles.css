@@ -1,22 +1,59 @@
 /* Outreachr Design System - Consistent tokens across all properties */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 :root {
-  /* Brand Colors - Extracted from Outreachr logo */
-  --color-primary: #2B7FFF;        /* Bright blue from logo icon */
-  --color-primary-hover: #1E6DE6;  /* Slightly darker for hover */
-  --color-primary-light: #EBF4FF;  /* Light blue background */
-  --color-primary-border: #A0CDFF;  /* Light blue border */
-  --color-dark: #3B4F6B;           /* Dark blue from logo background */
+  /* Brand Colors - Outreachr Signature Palette */
 
-  /* Neutral Colors */
+  /* Primary Scale - #2B7FFF (Azure Blue) - Core Brand Color */
+  --color-primary-50: #EBF4FF;
+  --color-primary-100: #D6E8FF;
+  --color-primary-200: #ADD2FF;
+  --color-primary-300: #85BBFF;
+  --color-primary-400: #5CA5FF;
+  --color-primary-500: #2B7FFF;
+  --color-primary-600: #246BDE;
+  --color-primary-700: #1D58BD;
+  --color-primary-800: #16459C;
+  --color-primary-900: #0F327A;
+
+  /* Legacy variable mapping for smooth transition */
+  --color-primary: var(--color-primary-500);
+  --color-primary-hover: var(--color-primary-600);
+  --color-primary-light: var(--color-primary-50);
+  --color-primary-border: var(--color-primary-200);
+
+  /* Accent Scale - #FFAB2B (Vibrant Amber) - Complementary contrast */
+  --color-accent-50: #FFF6E5;
+  --color-accent-100: #FFEDCC;
+  --color-accent-200: #FFDB99;
+  --color-accent-300: #FFC966;
+  --color-accent-400: #FFB733;
+  --color-accent-500: #FFAB2B;
+  --color-accent-600: #DB9225;
+  --color-accent-700: #B77A1F;
+  --color-accent-800: #936219;
+  --color-accent-900: #6F4913;
+
+  /* Semantic Colors */
+  --color-success: #10b981;
+  /* Emerald 500 */
+  --color-warning: var(--color-accent-500);
+  --color-error: #ef4444;
+  /* Red 500 */
+
+  /* Neutral Scale (Slate) - Clean, premium grays */
   --color-slate-50: #f8fafc;
   --color-slate-100: #f1f5f9;
   --color-slate-200: #e2e8f0;
   --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
   --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
   --color-slate-900: #0f172a;
+
+  /* Backgrounds and Dark Mode compatibility */
+  --color-dark: var(--color-slate-900);
 
   /* Spacing Scale */
   --spacing-xs: 0.5rem;
@@ -37,16 +74,12 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
-/* Base font family */
-body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
 /* Shared Animations */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-240px * 8));
   }
@@ -57,10 +90,12 @@ body {
     background-position: 0% 50%;
     background-size: 200% 100%;
   }
+
   50% {
     background-position: 100% 50%;
     background-size: 200% 100%;
   }
+
   100% {
     background-position: 0% 50%;
     background-size: 200% 100%;
